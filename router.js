@@ -12,7 +12,7 @@ router.get('/', controllerPage.getIndexPage)
     .get('/admin/login', controllerPage.getAdminLoginPage)
     .get('/admin/categories', controllerPage.getAdminCategoriesPage)
     .get('/admin/comments', controllerPage.getAdminCommentsPage)
-    .get('/admin/nav-menus ', controllerPage.getAdminNavMenusPage)
+    .get('/admin/nav-menus', controllerPage.getAdminNavMenusPage)
     .get('/admin/password-reset', controllerPage.getAdminPasswordResetPage)
     .get('/admin/post-add', controllerPage.getAdminPostAddPage)
     .get('/admin/posts', controllerPage.getAdminPostsPage)
@@ -20,6 +20,9 @@ router.get('/', controllerPage.getIndexPage)
     .get('/admin/settings', controllerPage.getAdminSettingsPage)
     .get('/admin/slides', controllerPage.getAdminSlidesPage)
     .get('/admin/users', controllerPage.getAdminUsersPage)
+
+
+    // .post()
 
 
 // 暴露
