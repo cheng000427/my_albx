@@ -13,7 +13,16 @@ exports.getListPage = (req, res) => {
 
 // 后台页面
 exports.getAdminIndexPage = (req, res) => {
-    res.render('admin/index')
+
+
+    // if (req.session.isLogin && req.session.isLogin == 'true') {
+        res.render('admin/index')
+    // }else{
+    //     res.writeHead(301,{
+    //         'Location':'/admin/login'
+    //     })
+    //     res.end();
+    // }
 }
 exports.getAdminLoginPage = (req, res) => {
     res.render('admin/login')
@@ -29,7 +38,7 @@ exports.getAdminNavMenusPage = (req, res) => {
 }
 exports.getAdminPasswordResetPage = (req, res) => {
     res.render('admin/password-reset')
-} 
+}
 exports.getAdminPostAddPage = (req, res) => {
     res.render('admin/post-add')
 }
