@@ -27,6 +27,7 @@ app.use(function (req, res, next) {
     // 2.前台页面
     // 3.有登录状态
     if (req.session.isLogin && req.session.isLogin == 'true' || req.url == '/admin/login' || req.url.indexOf('/admin') == -1) {
+        // console.log(req.session.isLogin)
         next();
     } else {
         res.redirect('/admin/login')

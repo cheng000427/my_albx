@@ -33,3 +33,31 @@ exports.Login = (req, res) => {
         }
     })
 }
+
+
+// exports.Login=(req,res)=>{
+//     // 获取数据
+//     var obj=req.body;
+//     userModel.Login(obj.email,(err,data)=>{
+//         if(err){
+//             res.json({code:504,msg:'服务器异常'})
+//         }else{
+//             if(data){
+//                 if(data.password==obj.password){
+//                     // 登录状态
+//                     req.session.Login='true';
+
+//                     req.session.currentUser=data;
+//                     res.end(JSON.stringify({code:200,msg:'登录成功'}))
+//                 }else{
+//                     res.json({code:504,msg:'密码错误'})
+//                 }
+//             }else{
+//                 res.json({code:504,msg:'邮箱错误'})
+//             }
+//         }
+//     })
+// }
+
+
+

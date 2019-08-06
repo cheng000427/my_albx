@@ -24,3 +24,17 @@ exports.Login = (email, callback) => {
         }
     })
 }
+
+// // 登录验证
+// exports.Login=(email,callback)=>{
+//     // 创建sql语句
+//     var sql=`SELECT * FROM users WHERE email='${email}'`;
+//     // 执行sql语句
+//     conn.query(sql,(err,results)=>{
+//         if(err){
+//             callback(err)
+//         }else{
+//             callback(null,results[0])
+//         }
+//     })
+// }

@@ -121,7 +121,9 @@ body {
 .aside .nav a + ul li:last-child {
   margin-bottom: 8px;
 }
-
+/* .alert-danger{
+  display: none;
+} */
 .aside .nav a + ul a {
   padding-left: 30px;
 }

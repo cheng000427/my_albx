@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const controllerPage = require('./controller/controllerPage');
-const Userscontroller=require('./controller/Userscontroller')
+const Userscontroller=require('./controller/Userscontroller');
+const postController=require('./controller/postController');
 // 渲染前台页面
 router.get('/', controllerPage.getIndexPage)
     .get('/detail', controllerPage.getDetailPage)
@@ -24,6 +25,7 @@ router.get('/', controllerPage.getIndexPage)
 
     // 处理后台业务逻辑
     .post('/login',Userscontroller.Login)
+    .get('/getAllPost',postController.getAllPost)
 
 
 // 暴露
