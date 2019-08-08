@@ -9,7 +9,7 @@ $(function () {
         success: function (res) {
             console.log(res)
             var html = template('Posttemplate', res);
-            console.log(html)
+            // console.log(html)
             $('tbody').html(html);
         }
     });

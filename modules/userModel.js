@@ -7,7 +7,7 @@ var conn = mysql.createConnection({
     password: 'root',
     database: 'alxb'
 })
-
+ 
 
 // 登录验证
 exports.Login = (email, callback) => {
