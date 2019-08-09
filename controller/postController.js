@@ -12,3 +12,17 @@ exports.getAllPost = (req, res) => {
         }
     })
 }
+exports.getAddPost=(req,res)=>{
+    var obj=req.body;
+    obj.views=0;
+    obj.likes=0;
+    obj.user_id=req.session.currentUser.id
+    postModel.getAddPost(obj,(err)=>{
+        console.log(err)
+        if(err){
+            res.json({code:400,msg:'新增失败'})
+        }else{
+            res.json({code:200,msg:'新增成功'})
+        }
+    })
+}

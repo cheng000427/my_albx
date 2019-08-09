@@ -3,7 +3,8 @@ const router = express.Router();
 const controllerPage = require('./controller/controllerPage');
 const Userscontroller=require('./controller/Userscontroller');
 const postController=require('./controller/postController');
-const catecontroller=require('./controller/cateController')
+const catecontroller=require('./controller/cateController');
+const uploadController=require('./controller/uploadController')
 // 渲染前台页面
 router.get('/', controllerPage.getIndexPage)
     .get('/detail', controllerPage.getDetailPage)
@@ -28,6 +29,11 @@ router.get('/', controllerPage.getIndexPage)
     .post('/login',Userscontroller.Login)
     .get('/getAllPost',postController.getAllPost)
     .get('/getAllCate',catecontroller.getAllCate)
+    
+    .post('/getAddPost',postController.getAddPost)
+    
 
+    // 实现上传
+    .post('/uploadFile',uploadController.uploadFile)
 // 暴露
 module.exports = router;

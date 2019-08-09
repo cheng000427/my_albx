@@ -6,7 +6,7 @@ exports.getAllCate = (callback) => {
     var sql=`SELECT * FROM categories`;
     // 执行sql语句
     conn.query(sql,(err,data)=>{
-        if(err){
+        if(err){ 
             callback(err)
         }else{
             callback(null,data)
